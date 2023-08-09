@@ -1,0 +1,15 @@
+@media (max-width: 1200px) {
+  .menu {
+    top: calc((100vh - 70px) / 2);
+    z-index: 4;
+  }
+  .desktop {
+    display: none;
+  }
+
+  .moblie {
+    display: block;
+    position: inherit;
+    margin-left: -20px;
+  }
+}

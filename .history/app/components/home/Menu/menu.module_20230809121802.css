@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background-color: grey;
+}
+
+.container p {
+  cursor: pointer;
+}

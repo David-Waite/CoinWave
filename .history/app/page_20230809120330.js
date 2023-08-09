@@ -1,11 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import SlideShow from "./components/home/Slideshow/Slideshow";
-import ProductLists from "./components/home/ProductLists/ProductLists";
+import SlideShow from "./components/Slideshow/Slideshow";
+import ProductLists from "./components/ProductLists/ProductLists";
 
 export default function Home() {
   return (
-    <main>
+    <main className={styles.main}>
       <SlideShow />
       <ProductLists />
     </main>

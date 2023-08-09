@@ -5,7 +5,7 @@ import ProductLists from "./components/home/ProductLists/ProductLists";
 
 export default function Home() {
   return (
-    <main>
+    <main className={styles.main}>
       <SlideShow />
       <ProductLists />
     </main>

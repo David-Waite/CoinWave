@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background-color: grey;
+}
+
+.container div p {
+  cursor: pointer;
+}
+
+.container p:hover {
+  color: green;
+}

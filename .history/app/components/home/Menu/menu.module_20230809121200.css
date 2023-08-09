@@ -1,0 +1,33 @@
+.selected {
+  border-radius: 0 3px 3px 0;
+  color: var(--white);
+  background: rgb(37, 91, 72);
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.linkContainer p:hover {
+  position: relative;
+  color: var(--white);
+}
+
+.moblie {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .menu {
+    top: calc((100vh - 70px) / 2);
+    z-index: 4;
+  }
+  .desktop {
+    display: none;
+  }
+
+  .moblie {
+    display: block;
+    position: inherit;
+    margin-left: -20px;
+  }
+}
