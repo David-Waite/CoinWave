@@ -90,6 +90,20 @@ export default function ProductLists() {
     return filteredItems;
   }
 
+  // if (searchQuery !== "") {
+  //   setSelectedItems((prev) => {
+  //     let filteredItems = [];
+
+  //     console.log(prev);
+  //     // prev.forEach((item) => {
+  //     //   if (item.productName.includes(searchQuery)) {
+  //     //     filteredItems.push(item);
+  //     //   }
+  //     // });
+  //     return prev;
+  //   });
+  // }
+
   const productCardsElement =
     selectedItems.length > 0 ? (
       <ProductCards items={selectedItems} />
@@ -100,11 +114,7 @@ export default function ProductLists() {
     <main className={styles.container}>
       <Menu selected={selected} onClick={handleClick} mobile={false} />
 
-      <input
-        name="search"
-        onChange={(e) => handleSearch(e.target.value)}
-        placeholder="search"
-      />
+      <input name="search" onChange={(e) => handleSearch(e.target.value)} />
       {productCardsElement}
     </main>
   );

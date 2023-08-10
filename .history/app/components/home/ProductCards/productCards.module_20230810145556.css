@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+}
+.imageContainer {
+  position: relative;
+  height: 50px;
+  width: 400px;
+}

@@ -3,32 +3,30 @@ import styles from "./menu.module.css";
 
 export default function Menu(props) {
   function handleClick(select) {
-    const selectedCategroy = select === props.selected ? "" : select;
-    props.onClick(selectedCategroy);
+    props.onClick(select);
   }
 
   const selectedP = {
     color: "Black",
-    backgroundColor: "green",
   };
 
   return (
     <div className={styles.container}>
       <div onClick={() => handleClick("art")}>
-        <p style={Object.assign(props.selected === "art" && selectedP)}>Art</p>
+        <p style={Object.assign(props.selected === art && selectedP)}>Art</p>
       </div>
 
       <div onClick={() => handleClick("memberships")}>
-        <p style={Object.assign(props.selected === "memberships" && selectedP)}>
+        <p style={Object.assign(props.selected.memberships && selectedP)}>
           Memberships
         </p>
       </div>
 
-      <div onClick={() => handleClick("pfp")}>
-        <p style={Object.assign(props.selected === "pfp" && selectedP)}>PFP</p>
+      <div onClick={() => handleClick("PFP")}>
+        <p style={Object.assign(props.selected.PFP && selectedP)}>PFP</p>
       </div>
       <div onClick={() => handleClick("photography")}>
-        <p style={Object.assign(props.selected === "photography" && selectedP)}>
+        <p style={Object.assign(props.selected.photography && selectedP)}>
           Photography
         </p>
       </div>

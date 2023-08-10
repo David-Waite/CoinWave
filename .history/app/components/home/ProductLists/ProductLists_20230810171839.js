@@ -100,11 +100,7 @@ export default function ProductLists() {
     <main className={styles.container}>
       <Menu selected={selected} onClick={handleClick} mobile={false} />
 
-      <input
-        name="search"
-        onChange={(e) => handleSearch(e.target.value)}
-        placeholder="search"
-      />
+      <input name="search" onChange={(e) => handleSearch(e.target.value)} />
       {productCardsElement}
     </main>
   );

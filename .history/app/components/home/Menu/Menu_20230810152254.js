@@ -3,13 +3,11 @@ import styles from "./menu.module.css";
 
 export default function Menu(props) {
   function handleClick(select) {
-    const selectedCategroy = select === props.selected ? "" : select;
-    props.onClick(selectedCategroy);
+    props.onClick(select);
   }
 
   const selectedP = {
     color: "Black",
-    backgroundColor: "green",
   };
 
   return (

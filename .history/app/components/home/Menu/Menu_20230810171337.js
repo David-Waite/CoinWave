@@ -8,7 +8,6 @@ export default function Menu(props) {
   }
 
   const selectedP = {
-    color: "Black",
     backgroundColor: "green",
   };
 

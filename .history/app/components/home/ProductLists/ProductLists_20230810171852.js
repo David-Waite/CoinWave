@@ -103,7 +103,7 @@ export default function ProductLists() {
       <input
         name="search"
         onChange={(e) => handleSearch(e.target.value)}
-        placeholder="search"
+        placeholder="searcg"
       />
       {productCardsElement}
     </main>

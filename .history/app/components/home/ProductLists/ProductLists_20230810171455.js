@@ -56,6 +56,7 @@ export default function ProductLists() {
     },
   ];
 
+  const [searchQuery, setSearchQuery] = useState("");
   const [selected, setSelected] = useState("");
   const [selectedItems, setSelectedItems] = useState(ITEMSDUMMY);
 
@@ -65,8 +66,8 @@ export default function ProductLists() {
   }
 
   function handleSearch(searchQueryInput) {
+    setSearchQuery(searchQueryInput);
     if (searchQueryInput != "") {
-      console.log(searchQueryInput);
       setSelectedItems(selectItemsBySearch(searchQueryInput));
     } else {
       setSelectedItems(selectItemsByCategory(selected));
@@ -81,14 +82,28 @@ export default function ProductLists() {
 
   function selectItemsBySearch(search) {
     let filteredItems = [];
-    ITEMSDUMMY.forEach((item) => {
-      if (item.productName.toLowerCase().includes(search.toLowerCase())) {
+    selectedItems.forEach((item) => {
+      if (item.productName.includes(search)) {
         filteredItems.push(item);
       }
     });
 
     return filteredItems;
   }
+
+  // if (searchQuery !== "") {
+  //   setSelectedItems((prev) => {
+  //     let filteredItems = [];
+
+  //     console.log(prev);
+  //     // prev.forEach((item) => {
+  //     //   if (item.productName.includes(searchQuery)) {
+  //     //     filteredItems.push(item);
+  //     //   }
+  //     // });
+  //     return prev;
+  //   });
+  // }
 
   const productCardsElement =
     selectedItems.length > 0 ? (
@@ -100,11 +115,7 @@ export default function ProductLists() {
     <main className={styles.container}>
       <Menu selected={selected} onClick={handleClick} mobile={false} />
 
-      <input
-        name="search"
-        onChange={(e) => handleSearch(e.target.value)}
-        placeholder="search"
-      />
+      <input name="search" onChange={(e) => handleSearch(e.target.value)} />
       {productCardsElement}
     </main>
   );

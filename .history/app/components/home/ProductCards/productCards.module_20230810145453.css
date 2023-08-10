@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 16px;
+}
+.imageContainer {
+  position: relative;
+  height: 50px;
+  width: 100%;
+}

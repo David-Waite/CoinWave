@@ -3,13 +3,11 @@ import styles from "./menu.module.css";
 
 export default function Menu(props) {
   function handleClick(select) {
-    const selectedCategroy = select === props.selected ? "" : select;
-    props.onClick(selectedCategroy);
+    props.onClick(select);
   }
 
   const selectedP = {
     color: "Black",
-    backgroundColor: "green",
   };
 
   return (
@@ -24,11 +22,11 @@ export default function Menu(props) {
         </p>
       </div>
 
-      <div onClick={() => handleClick("pfp")}>
-        <p style={Object.assign(props.selected === "pfp" && selectedP)}>PFP</p>
+      <div onClick={() => handleClick("PFP")}>
+        <p style={Object.assign(props.selected.PFP && selectedP)}>PFP</p>
       </div>
       <div onClick={() => handleClick("photography")}>
-        <p style={Object.assign(props.selected === "photography" && selectedP)}>
+        <p style={Object.assign(props.selected.photography && selectedP)}>
           Photography
         </p>
       </div>
