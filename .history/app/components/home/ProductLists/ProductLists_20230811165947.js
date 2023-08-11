@@ -98,7 +98,7 @@ export default function ProductLists() {
     );
   return (
     <main className={styles.container}>
-      <Menu selected={selected} onClick={handleMenuSelect} />
+      <Menu selected={selected} onClick={handleMenuSelect} mobile={false} />
 
       <input
         name="search"

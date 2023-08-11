@@ -25,9 +25,9 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
-
+    // /index.html?firstName=asdasd&lastName=asdasd&email=&comments=&isFriendly=on&favColor=red
+    // submitToApi(formData)
     console.log(formData);
-    router.push("/account");
   }
 
   return (

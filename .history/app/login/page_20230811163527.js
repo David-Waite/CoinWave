@@ -27,7 +27,6 @@ export default function Login() {
     event.preventDefault();
 
     console.log(formData);
-    router.push("/account");
   }
 
   return (

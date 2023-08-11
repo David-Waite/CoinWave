@@ -2,7 +2,6 @@
 import Image from "next/image";
 import styles from "./login.module.css";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 export default function Login() {
   const [formData, setFormData] = useState({
@@ -10,8 +9,6 @@ export default function Login() {
     password: "",
     rememberMe: false,
   });
-
-  const router = useRouter();
 
   function handleChange(event) {
     const { type, name, value, checked } = event.target;
@@ -25,9 +22,9 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
-
+    // /index.html?firstName=asdasd&lastName=asdasd&email=&comments=&isFriendly=on&favColor=red
+    // submitToApi(formData)
     console.log(formData);
-    router.push("/account");
   }
 
   return (
@@ -50,14 +47,13 @@ export default function Login() {
 
         <input
           type="checkbox"
-          id="rememberMe"
-          checked={formData.rememberMe}
+          id="isFriendly"
+          checked={formData.isFriendly}
           onChange={handleChange}
-          name="rememberMe"
+          name="isFriendly"
         />
-        <label htmlFor="rememberMe">remember me</label>
 
-        <button>Login</button>
+        <button>Submit</button>
       </form>
     </main>
   );

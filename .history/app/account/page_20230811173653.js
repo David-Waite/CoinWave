@@ -1,8 +1,8 @@
 "use client";
 import styles from "./account.module.css";
-import { useState } from "react";
 import AccountMenu from "../components/account/AccountMenu/AccountMenu";
 import AccountInformation from "../components/account/AccountInfomation/AccountInfomation";
+import { useState } from "react";
 import SellProduct from "../components/account/SellProduct/SellProduct";
 import PurchaseHistroy from "../components/account/PurchaseHistory/PurchaseHistory";
 
@@ -14,11 +14,14 @@ export default function Account() {
   });
 
   function handleMenuSelect(select) {
-    setSelected({
-      accountInformation: select === "accountInformation",
-      sellProduct: select === "sellProduct",
-      purchaseHistroy: select === "purchaseHistroy",
+    setSelected((prev) => {
+      return {
+        accountInformation: select === "accountInformation",
+        accountInformation: select === "accountInformation",
+        accountInformation: select === "accountInformation",
+      };
     });
+    console.log(select);
   }
 
   return (

@@ -59,7 +59,7 @@ export default function ProductLists() {
   const [selected, setSelected] = useState("");
   const [selectedItems, setSelectedItems] = useState(ITEMSDUMMY);
 
-  function handleMenuSelect(select) {
+  function handleClick(select) {
     setSelected(select);
     setSelectedItems(selectItemsByCategory(select));
   }
@@ -98,7 +98,7 @@ export default function ProductLists() {
     );
   return (
     <main className={styles.container}>
-      <Menu selected={selected} onClick={handleMenuSelect} />
+      <Menu selected={selected} onClick={handleClick} mobile={false} />
 
       <input
         name="search"
