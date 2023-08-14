@@ -1,0 +1,10 @@
+.imageContainer {
+  position: relative;
+  max-width: 100vw;
+  height: 600px;
+}
+
+.imageContainer img {
+  position: absolute;
+  left: 200px;
+}

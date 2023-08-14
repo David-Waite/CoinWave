@@ -1,0 +1,43 @@
+.slideShowContainer {
+  position: relative;
+  width: 100vw;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slideContainer {
+  height: 600px;
+  width: 100vw;
+  position: absolute;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.rightBtn {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  top: 50%;
+  font-size: 60px;
+  background-color: white;
+}
+
+.leftBtn {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 50%;
+  font-size: 60px;
+  background-color: white;
+}
+
+.selectElement {
+  width: 16px;
+  height: 16px;
+  background-color: grey;
+  border-radius: 50%;
+}

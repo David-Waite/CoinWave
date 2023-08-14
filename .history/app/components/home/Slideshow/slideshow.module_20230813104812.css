@@ -1,0 +1,17 @@
+.slideShowContainer {
+  width: 100vw;
+  height: 600px;
+}
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slideContainer {
+  height: 600px;
+  width: 100vw;
+  position: absolute;
+
+  left: 200px;
+}

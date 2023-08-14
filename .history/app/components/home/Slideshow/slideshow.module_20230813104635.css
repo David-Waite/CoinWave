@@ -1,0 +1,12 @@
+.imageContainer {
+  position: relative;
+  max-width: 100vw;
+  height: 600px;
+}
+
+.slideContainer {
+  position: absolute;
+  height: 600px;
+  width: 100vw;
+  left: 200px;
+}
