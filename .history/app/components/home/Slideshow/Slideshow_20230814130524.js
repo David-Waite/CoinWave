@@ -28,7 +28,7 @@ export default function SlideShow() {
   const invervalTimeMaster = 5000;
   const transitionTimeMaster = 1;
   const [index, setIndex] = useState(1);
-  const [transitionTime, setTrasitionTime] = useState(transitionTimeMaster);
+  const [transitionTime, setTrasitionTime] = useState(1);
   const [intervalTime, setIntervalTime] = useState(invervalTimeMaster);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export default function SlideShow() {
             setIntervalTime(0);
             return 1;
           }
-          setTrasitionTime(transitionTimeMaster);
+          setTrasitionTime(1);
           setIntervalTime(invervalTimeMaster);
           return prev + 1;
         }),
@@ -63,7 +63,7 @@ export default function SlideShow() {
         setIntervalTime(0);
         return 1;
       } else {
-        setTrasitionTime(transitionTimeMaster);
+        setTrasitionTime(1);
         setIntervalTime(invervalTimeMaster);
         return prev + 1;
       }
@@ -76,7 +76,7 @@ export default function SlideShow() {
       setTrasitionTime(0);
       setIndex(imagesUpdated.length - 2);
     } else {
-      setTrasitionTime(transitionTimeMaster);
+      setTrasitionTime(1);
       setIndex((prev) => {
         return prev - 1;
       });

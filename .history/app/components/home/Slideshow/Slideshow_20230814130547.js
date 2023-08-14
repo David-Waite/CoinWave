@@ -40,7 +40,7 @@ export default function SlideShow() {
       () =>
         setIndex((prev) => {
           if (prev == imagesUpdated.length - 1) {
-            setTrasitionTime(0);
+            setTrasitionTime(transitionTimeMaster);
             setIntervalTime(0);
             return 1;
           }
@@ -63,7 +63,7 @@ export default function SlideShow() {
         setIntervalTime(0);
         return 1;
       } else {
-        setTrasitionTime(transitionTimeMaster);
+        setTrasitionTime(1);
         setIntervalTime(invervalTimeMaster);
         return prev + 1;
       }
@@ -76,7 +76,7 @@ export default function SlideShow() {
       setTrasitionTime(0);
       setIndex(imagesUpdated.length - 2);
     } else {
-      setTrasitionTime(transitionTimeMaster);
+      setTrasitionTime(1);
       setIndex((prev) => {
         return prev - 1;
       });

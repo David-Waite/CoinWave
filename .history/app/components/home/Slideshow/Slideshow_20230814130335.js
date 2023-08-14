@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-
+import { nanoid } from "nanoid";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import styles from "./slideshow.module.css";
 import { useEffect, useState } from "react";
@@ -25,12 +25,12 @@ export default function SlideShow() {
     image: images[0],
     id: imagesUpdated.length,
   });
-  const invervalTimeMaster = 5000;
-  const transitionTimeMaster = 1;
-  const [index, setIndex] = useState(1);
-  const [transitionTime, setTrasitionTime] = useState(transitionTimeMaster);
-  const [intervalTime, setIntervalTime] = useState(invervalTimeMaster);
 
+  const [index, setIndex] = useState(1);
+  const [transitionTime, setTrasitionTime] = useState(1);
+  const [intervalTime, setIntervalTime] = useState(invervalTimeConst);
+
+  const invervalTimeConst = 3000;
   useEffect(() => {
     () => {
       clearInterval(interval);
@@ -44,8 +44,8 @@ export default function SlideShow() {
             setIntervalTime(0);
             return 1;
           }
-          setTrasitionTime(transitionTimeMaster);
-          setIntervalTime(invervalTimeMaster);
+          setTrasitionTime(1);
+          setIntervalTime(5000);
           return prev + 1;
         }),
       intervalTime
@@ -63,8 +63,8 @@ export default function SlideShow() {
         setIntervalTime(0);
         return 1;
       } else {
-        setTrasitionTime(transitionTimeMaster);
-        setIntervalTime(invervalTimeMaster);
+        setTrasitionTime(1);
+        setIntervalTime(3000);
         return prev + 1;
       }
     });
@@ -76,7 +76,7 @@ export default function SlideShow() {
       setTrasitionTime(0);
       setIndex(imagesUpdated.length - 2);
     } else {
-      setTrasitionTime(transitionTimeMaster);
+      setTrasitionTime(1);
       setIndex((prev) => {
         return prev - 1;
       });
