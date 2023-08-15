@@ -1,7 +1,7 @@
 .container {
   background: linear-gradient(90deg, #ff9e9e 0%, #6f9bef 69.85%, #1b50b8 100%);
   padding: 0 60px 60px;
-  min-height: calc(100vh - 628px);
+  min-height: calc(100vh - 768px);
 }
 
 @media (max-width: 1600px) {
