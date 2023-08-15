@@ -4,22 +4,27 @@ import Image from "next/image";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import styles from "./slideshow.module.css";
 import { useEffect, useState } from "react";
-import Link from "next/link";
 
-export default function SlideShow({ slides }) {
-  let imagesUpdated = slides.map((item) => {
+export default function SlideShow() {
+  const images = [
+    "/slideshowImage1.png",
+    "/slideshowImage2.png",
+    "/slideshowImage3.png",
+    "/slideshowImage4.png",
+  ];
+
+  let imagesUpdated = images.map((item) => {
     return {
-      ...item,
-      id: slides.findIndex((element) => element === item) + 1,
+      image: item,
+      id: images.findIndex((element) => element === item) + 1,
     };
   });
 
-  imagesUpdated.unshift({ ...slides[slides.length - 1], id: 0 });
+  imagesUpdated.unshift({ image: images[images.length - 1], id: 0 });
   imagesUpdated.push({
-    ...slides[0],
+    image: images[0],
     id: imagesUpdated.length,
   });
-
   const invervalTimeMaster = 5000;
   const transitionTimeMaster = 1;
   const [index, setIndex] = useState(1);
@@ -78,40 +83,37 @@ export default function SlideShow({ slides }) {
     }
   }
 
-  const imageElements = imagesUpdated.map((slide) => {
-    const postion = slide.id;
+  const imageElements = imagesUpdated.map((image) => {
+    const postion = image.id;
 
     return (
-      <Link href={`/products/${slide.productId}`} key={slide.id}>
-        <div
-          key={slide.id}
-          className={styles.slideContainer}
-          style={{
-            left: `${postion - index}00%`,
-            transition: `${transitionTime}s`,
-          }}
-        >
-          <div className={styles.textContainer}>
-            <h1 className={styles.title}>{slide.title}</h1>
-            <h2 className={styles.author}>{slide.from}</h2>
-            <p className={styles.price}>{slide.price} ETH</p>
-          </div>
-          <div className={styles}></div>
-          <div className={styles.imageContainer}>
-            <Image
-              src={slide.image}
-              fill={true}
-              objectFit="cover"
-              alt="slideshow"
-            />
-          </div>
+      <div
+        key={image.id}
+        className={styles.slideContainer}
+        style={{
+          left: `${postion - index}00%`,
+          transition: `${transitionTime}s`,
+        }}
+      >
+        <div className={styles.textContainer}>
+          <h1 className={styles.title}>Nexium vacy</h1>
+          <h2 className={styles.author}>From Johne Doe</h2>
+          <p className={styles.price}>18 ETH</p>
         </div>
-      </Link>
+        <div className={styles.imageContainer}>
+          <Image
+            src={image.image}
+            fill={true}
+            objectFit="cover"
+            alt="slideshow"
+          />
+        </div>
+      </div>
     );
   });
 
-  const selectElements = slides.map((image) => {
-    const postion = slides.findIndex((element) => element === image) + 1;
+  const selectElements = images.map((image) => {
+    const postion = images.findIndex((element) => element === image) + 1;
 
     return (
       <div

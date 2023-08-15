@@ -4,7 +4,6 @@ import Image from "next/image";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import styles from "./slideshow.module.css";
 import { useEffect, useState } from "react";
-import Link from "next/link";
 
 export default function SlideShow({ slides }) {
   let imagesUpdated = slides.map((item) => {
@@ -82,7 +81,8 @@ export default function SlideShow({ slides }) {
     const postion = slide.id;
 
     return (
-      <Link href={`/products/${slide.productId}`} key={slide.id}>
+      <Link>
+        {" "}
         <div
           key={slide.id}
           className={styles.slideContainer}

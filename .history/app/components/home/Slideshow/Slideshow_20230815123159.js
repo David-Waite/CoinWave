@@ -6,6 +6,7 @@ import styles from "./slideshow.module.css";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
+L;
 export default function SlideShow({ slides }) {
   let imagesUpdated = slides.map((item) => {
     return {
@@ -82,7 +83,7 @@ export default function SlideShow({ slides }) {
     const postion = slide.id;
 
     return (
-      <Link href={`/products/${slide.productId}`} key={slide.id}>
+      <Link href={"/"} key={slide.id}>
         <div
           key={slide.id}
           className={styles.slideContainer}

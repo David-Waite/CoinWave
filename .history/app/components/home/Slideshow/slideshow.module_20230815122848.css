@@ -129,14 +129,6 @@
   .textContainer {
     left: 16px;
   }
-
-  .title {
-    font-size: 25px;
-  }
-  .price,
-  .author {
-    font-size: 12.8px;
-  }
 }
 
 @media (max-width: 500px) {

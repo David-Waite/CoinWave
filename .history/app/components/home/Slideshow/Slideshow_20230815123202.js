@@ -82,7 +82,7 @@ export default function SlideShow({ slides }) {
     const postion = slide.id;
 
     return (
-      <Link href={`/products/${slide.productId}`} key={slide.id}>
+      <Link href={"/"} key={slide.id}>
         <div
           key={slide.id}
           className={styles.slideContainer}
