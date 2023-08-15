@@ -1,0 +1,11 @@
+.searchBar {
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  width: 500px;
+}
+
+.searchIcon {
+  background-color: white;
+  font-size: 30px;
+}

@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.link {
+  text-decoration: none;
+}
+.imageContainer {
+  position: relative;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  height: 222px;
+  width: 333px;
+}
+
+.cardContainer {
+  background-color: white;
+  border-radius: 12px;
+}
+
+.cardBottom {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardInfoContainer {
+  display: grid;
+}
+
+.title,
+.price,
+.from {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}

@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  gap: 16px;
+  padding: 32px 60px;
+}
+
+.container p {
+  cursor: pointer;
+  color: rgb(239, 239, 239);
+  font-weight: 500;
+}
+
+.container p:hover {
+  color: white;
+}

@@ -1,0 +1,62 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  gap: 16px;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  position: relative;
+  height: 100%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 16px;
+  border-radius: 12px;
+}
+.imageContainer {
+  position: relative;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+
+  height: calc((100vw / 6) - 120px - (16px * (6 - 1)));
+  /* (total view width / amount of columns) - container margin - (gap * (amount of columns - 1)) */
+  width: 100%;
+}
+
+.cardContainer {
+  background-color: white;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.cardBottom {
+  padding: 16px;
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardInfoContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.title,
+.price,
+.from {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+.priceHeading,
+.fromHeading {
+  font-size: 14.4px;
+  color: grey;
+  margin-bottom: 8px;
+}

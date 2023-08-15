@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.imageContainer {
+  position: relative;
+  border-radius: 12px;
+  height: 400px;
+  width: 400px;
+}
+
+.cardContainer {
+  background-color: white;
+  border-radius: 12px;
+}

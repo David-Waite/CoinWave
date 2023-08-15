@@ -1,0 +1,12 @@
+.menuContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchBar {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  width: 500px;
+}

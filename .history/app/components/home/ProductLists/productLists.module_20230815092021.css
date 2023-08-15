@@ -1,0 +1,9 @@
+.menuContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchBar {
+  padding: 16px 32px;
+}
