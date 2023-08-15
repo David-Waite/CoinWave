@@ -1,0 +1,9 @@
+:root {
+  --primary: #fc9d9f;
+  --black: #191d1b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

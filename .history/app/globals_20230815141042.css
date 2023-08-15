@@ -1,0 +1,13 @@
+:root {
+  --primary: #255b48;
+  --black: #191d1b;
+  --background: #f3eddf;
+  --white: #ffffff;
+  --grey: #606060;
+  --error: #a83c23;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

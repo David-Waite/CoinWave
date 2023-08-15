@@ -1,0 +1,12 @@
+.container {
+  background: linear-gradient(90deg, #ff9e9e 0%, #6f9bef 69.85%, #1b50b8 100%);
+  min-height: calc(100vh - 69px);
+
+  display: grid;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 16px;
+}
