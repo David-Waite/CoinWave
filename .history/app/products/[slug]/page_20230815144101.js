@@ -1,20 +1,17 @@
 "use client";
 
-import styles from "./productLists.module.css";
+import Image from "next/image";
+import styles from "./productAbout.module.css";
+import Link from "next/link";
 
-import { useState } from "react";
-import Menu from "../Menu/Menu";
-import ProductCards from "../ProductCards/ProductCards";
-import SearchBar from "../SearchBar/SearchBar";
-
-export default function ProductLists() {
+export default function Page({ params }) {
   const ITEMSDUMMY = [
     {
       id: 1,
       description: "Art dummy product description",
       category: "art",
       productName: "Art dummy title",
-      imageURL: "/slideshowImage1.png",
+      imageURL: "/slideshowImage1.avif",
       altText: "art dummy alt text",
       author: "John Doe",
       price: 420,
@@ -25,7 +22,7 @@ export default function ProductLists() {
       category: "memberships",
       description: "Memberships dummy product description",
       productName: "Membership dummy title",
-      imageURL: "/slideshowImage1.png",
+      imageURL: "/slideshowImage1.avif",
       altText: "art dummy alt text",
       author: "John Doe",
       price: 420,
@@ -35,7 +32,7 @@ export default function ProductLists() {
       category: "pfp",
       description: "Pfp dummy product description",
       productName: "Pfp dummy title",
-      imageURL: "/slideshowImage1.png",
+      imageURL: "/slideshowImage1.avif",
       altText: "art dummy alt text",
       author: "John Doe",
       price: 420,
@@ -45,7 +42,7 @@ export default function ProductLists() {
       category: "photography",
       description: "Photography dummy product description",
       productName: "Photography dummy title",
-      imageURL: "/slideshowImage1.png",
+      imageURL: "/slideshowImage1.avif",
       altText: "art dummy alt text",
       author: "John Doe",
       price: 420,
@@ -55,7 +52,7 @@ export default function ProductLists() {
       description: "art dummy product description",
       category: "art",
       productName: "Art dummy title the second",
-      imageURL: "/slideshowImage1.png",
+      imageURL: "/slideshowImage1.avif",
       altText: "art dummy alt text",
       author: "John Doe",
       price: 420,
@@ -65,7 +62,7 @@ export default function ProductLists() {
       description: "art dummy product description",
       category: "art",
       productName: "Art dummy title the second",
-      imageURL: "/slideshowImage1.png",
+      imageURL: "/slideshowImage1.avif",
       altText: "art dummy alt text",
       author: "John Doe",
       price: 420,
@@ -75,7 +72,7 @@ export default function ProductLists() {
       description: "art dummy product description",
       category: "art",
       productName: "Art dummy title the second",
-      imageURL: "/slideshowImage1.png",
+      imageURL: "/slideshowImage1.avif",
       altText: "art dummy alt text",
       author: "John Doe the man with a long name ",
       price: 420,
@@ -85,62 +82,50 @@ export default function ProductLists() {
       description: "art dummy product description",
       category: "art",
       productName: "Art dummy title the second",
-      imageURL: "/slideshowImage1.png",
+      imageURL: "/slideshowImage1.avif",
       altText: "art dummy alt text",
       author: "John Doe",
       price: 420,
     },
   ];
 
-  const [selected, setSelected] = useState("");
-  const [selectedItems, setSelectedItems] = useState(ITEMSDUMMY);
+  const selectedItem = ITEMSDUMMY.filter((item) => item.id == params.slug)[0];
 
-  function handleMenuSelect(select) {
-    setSelected(select);
-    setSelectedItems(selectItemsByCategory(select));
-  }
-
-  function handleSearch(searchQueryInput) {
-    if (searchQueryInput != "") {
-      console.log(searchQueryInput);
-      setSelectedItems(selectItemsBySearch(searchQueryInput));
-    } else {
-      setSelectedItems(selectItemsByCategory(selected));
-    }
-  }
-
-  function selectItemsByCategory(select) {
-    return ITEMSDUMMY.filter((item) =>
-      item.category === select ? item : select === "" && item
-    );
-  }
-
-  function selectItemsBySearch(search) {
-    let filteredItems = [];
-    ITEMSDUMMY.forEach((item) => {
-      if (item.productName.toLowerCase().includes(search.toLowerCase())) {
-        filteredItems.push(item);
-      }
-    });
-
-    return filteredItems;
-  }
-
-  const productCardsElement =
-    selectedItems.length > 0 ? (
-      <ProductCards items={selectedItems} />
-    ) : (
-      <div>nothing to see</div>
-    );
   return (
-    <main className={styles.container}>
-      <div className={styles.menuContainer}>
-        <Menu selected={selected} onClick={handleMenuSelect} />
+    <div className={styles.container}>
+      <Link className={styles.backBtn} href={"/"}>
+        Back
+      </Link>
+      <div className={styles.contentContainer}>
+        <div className={styles.card}>
+          <div className={styles.imageContainer}>
+            <Image
+              src={selectedItem.imageURL}
+              fill={true}
+              alt={selectedItem.altText}
+              objectFit="contain"
+            />
+          </div>
+        </div>
 
-        <SearchBar onChange={(e) => handleSearch(e.target.value)} />
+        <div className={styles.infoContainer}>
+          <div className={styles.card}>
+            <p className={styles.smallTitle}>{selectedItem.author}</p>
+            <h1>{selectedItem.productName}</h1>
+          </div>
+          <div className={styles.card}>
+            <h2 className={styles.smallTitle}>Price</h2>
+            <p className={`${styles.text} ${styles.price}`}>
+              {selectedItem.price} ETH <span>$120</span>
+            </p>
+            <button className={styles.addToCartBtn}>Add to cart</button>
+          </div>
+          <div className={styles.card}>
+            <h2 className={styles.smallTitle}>Description</h2>
+            <p className={styles.text}>{selectedItem.description}</p>
+          </div>
+        </div>
       </div>
-
-      {productCardsElement}
-    </main>
+    </div>
   );
 }
