@@ -34,38 +34,40 @@ export default function SellProduct() {
   return (
     <main className={styles.main}>
       <form onSubmit={handleSubmit}>
-        <h1 className={styles.title}>List Product</h1>
+        <h1 className={styles.title}>Sell Product</h1>
 
         <div className={styles.form}>
-          <div className={styles.inputContainer}>
-            <label className={styles.lable} htmlFor="itemName">
-              Item Name
-            </label>
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Item Name"
-              onChange={handleChange}
-              name="itemName"
-              value={formData.itemName}
-            />
-          </div>
-          <div className={styles.inputContainer}>
-            <label className={styles.lable} htmlFor="category">
-              Category
-            </label>
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Category"
-              onChange={handleChange}
-              name="category"
-              value={formData.category}
-            />
+          <div className={styles.nameContainer}>
+            <div className={styles.inputContainer}>
+              <label className={styles.firstNameLable} htmlFor="itemName">
+                Item Name
+              </label>
+              <input
+                className={styles.input}
+                type="text"
+                placeholder="Item Name"
+                onChange={handleChange}
+                name="itemName"
+                value={formData.itemName}
+              />
+            </div>
+            <div className={styles.inputContainer}>
+              <label className={styles.lastNameLable} htmlFor="category">
+                Category
+              </label>
+              <input
+                className={styles.input}
+                type="text"
+                placeholder="Category"
+                onChange={handleChange}
+                name="category"
+                value={formData.category}
+              />
+            </div>
           </div>
 
           <div className={styles.inputContainer}>
-            <label className={styles.lable} htmlFor="photo">
+            <label className={styles.emailLable} htmlFor="photo">
               Photo
             </label>
             <input
@@ -78,7 +80,7 @@ export default function SellProduct() {
             />
           </div>
           <div className={styles.inputContainer}>
-            <label className={styles.lable} htmlFor="description">
+            <label className={styles.emailLable} htmlFor="description">
               Description
             </label>
             <input
@@ -86,26 +88,14 @@ export default function SellProduct() {
               type="text"
               placeholder="Description"
               onChange={handleChange}
-              name="description"
-              value={formData.description}
-            />
-          </div>
-          <div className={styles.inputContainer}>
-            <label className={styles.lable} htmlFor="price">
-              Price
-            </label>
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Price"
-              onChange={handleChange}
-              name="description"
-              value={formData.price}
+              name="photo"
+              value={formData.photo}
             />
           </div>
         </div>
         <div className={styles.buttonContainer}>
-          <button className={styles.saveChanges}>Submit</button>
+          <button className={styles.discardChanges}>Discard Changes</button>
+          <button className={styles.saveChanges}>Save Changes</button>
         </div>
       </form>
     </main>

@@ -105,7 +105,7 @@ export default function SellProduct() {
           </div>
         </div>
         <div className={styles.buttonContainer}>
-          <button className={styles.saveChanges}>Submit</button>
+          <button className={styles.saveChanges}>List Product</button>
         </div>
       </form>
     </main>

@@ -34,7 +34,7 @@ export default function SellProduct() {
   return (
     <main className={styles.main}>
       <form onSubmit={handleSubmit}>
-        <h1 className={styles.title}>List Product</h1>
+        <h1 className={styles.title}>Sell Product</h1>
 
         <div className={styles.form}>
           <div className={styles.inputContainer}>
@@ -105,7 +105,8 @@ export default function SellProduct() {
           </div>
         </div>
         <div className={styles.buttonContainer}>
-          <button className={styles.saveChanges}>Submit</button>
+          <button className={styles.discardChanges}>Discard Changes</button>
+          <button className={styles.saveChanges}>Save Changes</button>
         </div>
       </form>
     </main>
