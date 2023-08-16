@@ -42,7 +42,7 @@ export default function Account() {
       <AccountMenu
         selected={selected}
         onClick={handleMenuSelect}
-        open={screenSize < 769 ? true : false}
+        open={screenSize > 769 ? true : false}
       />
 
       <main className={styles.mainContent}>

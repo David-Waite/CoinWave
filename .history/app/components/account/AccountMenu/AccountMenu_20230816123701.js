@@ -3,7 +3,7 @@ import { RiExpandLeftRightLine } from "react-icons/ri";
 import { MdHistory, MdHome, MdSell } from "react-icons/md";
 import { useState } from "react";
 export default function AccountMenu(props) {
-  const [collapseMenu, setCollapseMenu] = useState(props.open);
+  const [collapseMenu, setCollapseMenu] = useState(false);
   function handleClick(select) {
     props.onClick(select);
   }

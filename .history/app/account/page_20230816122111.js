@@ -1,28 +1,12 @@
 "use client";
 import styles from "./account.module.css";
-
+import { useState } from "react";
 import AccountMenu from "../components/account/AccountMenu/AccountMenu";
 import AccountInformation from "../components/account/AccountInfomation/AccountInfomation";
 import SellProduct from "../components/account/SellProduct/SellProduct";
 import PurchaseHistroy from "../components/account/PurchaseHistory/PurchaseHistory";
-import { useRef, useEffect, useState } from "react";
+
 export default function Account() {
-  const [screenSize, setScreenSize] = useState(getCurrentDimension());
-
-  useEffect(() => {
-    const updateDimension = () => {
-      setScreenSize(getCurrentDimension());
-    };
-    window.addEventListener("resize", updateDimension);
-
-    return () => {
-      window.removeEventListener("resize", updateDimension);
-    };
-  }, [screenSize]);
-  function getCurrentDimension() {
-    return innerWidth;
-  }
-
   const [selected, setSelected] = useState({
     accountInformation: true,
     sellProduct: false,
@@ -39,11 +23,7 @@ export default function Account() {
 
   return (
     <div className={styles.main}>
-      <AccountMenu
-        selected={selected}
-        onClick={handleMenuSelect}
-        open={screenSize < 769 ? true : false}
-      />
+      <AccountMenu selected={selected} onClick={handleMenuSelect} />
 
       <main className={styles.mainContent}>
         {selected.accountInformation && <AccountInformation />}

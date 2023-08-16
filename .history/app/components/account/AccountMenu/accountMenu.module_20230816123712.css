@@ -4,7 +4,6 @@
   height: 100vh;
   width: 279px;
   transition: 0.3s;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .infoOverView {
@@ -78,16 +77,12 @@
 }
 
 .linkText {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 @media (max-width: 778px) {
   .emailOverView,
   .fullNameOverView {
     font-size: 12.8px;
-  }
-
-  .linkText {
-    font-size: 16px;
   }
 }

@@ -4,13 +4,13 @@
   height: 100vh;
   width: 279px;
   transition: 0.3s;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .infoOverView {
   display: flex;
   align-items: center;
   gap: 16px;
+
   padding: 32px;
 }
 
@@ -69,6 +69,13 @@
   color: white;
 }
 
+.photo {
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  border-radius: 50%;
+}
+
 .expandBtn {
   cursor: pointer;
   position: absolute;
@@ -77,17 +84,9 @@
   color: white;
 }
 
-.linkText {
-  font-size: 16px;
-}
-
 @media (max-width: 778px) {
   .emailOverView,
   .fullNameOverView {
     font-size: 12.8px;
-  }
-
-  .linkText {
-    font-size: 16px;
   }
 }

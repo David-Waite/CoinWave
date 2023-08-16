@@ -39,11 +39,7 @@ export default function Account() {
 
   return (
     <div className={styles.main}>
-      <AccountMenu
-        selected={selected}
-        onClick={handleMenuSelect}
-        open={screenSize < 769 ? true : false}
-      />
+      <AccountMenu selected={selected} onClick={handleMenuSelect} />
 
       <main className={styles.mainContent}>
         {selected.accountInformation && <AccountInformation />}
