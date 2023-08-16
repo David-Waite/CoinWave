@@ -5,7 +5,7 @@ import AccountMenu from "../components/account/AccountMenu/AccountMenu";
 import AccountInformation from "../components/account/AccountInfomation/AccountInfomation";
 import SellProduct from "../components/account/SellProduct/SellProduct";
 import PurchaseHistroy from "../components/account/PurchaseHistory/PurchaseHistory";
-import { useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 export default function Account() {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
 
