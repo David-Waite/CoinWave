@@ -20,9 +20,12 @@ export default function Account() {
     };
   }, [screenSize]);
 
-  function getCurrentDimension() {
-    return window.innerWidth;
-  }
+
+  function getCurrentDimension(){
+    return window.innerWidth,
+      
+    }
+}
 
   const [selected, setSelected] = useState({
     accountInformation: true,

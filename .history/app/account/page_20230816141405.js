@@ -19,9 +19,8 @@ export default function Account() {
       window.removeEventListener("resize", updateDimension);
     };
   }, [screenSize]);
-
   function getCurrentDimension() {
-    return window.innerWidth;
+    return innerWidth;
   }
 
   const [selected, setSelected] = useState({
