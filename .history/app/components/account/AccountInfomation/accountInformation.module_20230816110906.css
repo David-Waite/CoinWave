@@ -1,0 +1,16 @@
+.main {
+  padding: 32px;
+}
+
+.title {
+  font-size: 28.13px;
+}
+
+.welcomeText {
+  font-size: 14.4px;
+  color: grey;
+  margin-top: 8px;
+}
+
+.firstNameLable,
+.lastNameLable;

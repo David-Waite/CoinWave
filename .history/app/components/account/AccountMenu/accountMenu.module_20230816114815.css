@@ -1,0 +1,74 @@
+.container {
+  background-color: var(--primary);
+  position: relative;
+  height: 100vh;
+  width: 279px;
+  transition: 1s;
+}
+
+.infoOverView {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 32px;
+}
+
+.fullNameOverView {
+  color: white;
+  font-size: 14.4px;
+  font-weight: 500;
+}
+
+.emailOverView {
+  color: white;
+  font-size: 14.4px;
+}
+
+.overViewTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.linkContainer {
+  padding: 16px 0;
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 16px;
+  padding-left: 32px;
+  border-top: 1px solid black;
+  cursor: pointer;
+}
+.linkContainer:hover {
+  background-color: #fa8284;
+}
+
+.menuIcons {
+  font-size: 32px;
+}
+
+.linkContainerBottom {
+  border-bottom: 1px solid black;
+}
+
+.linkContainer p {
+  padding-right: 32px;
+  color: white;
+}
+
+.photo {
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.expandBtn {
+  cursor: pointer;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  color: white;
+}

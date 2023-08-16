@@ -1,0 +1,42 @@
+.main {
+  padding: 32px;
+  width: 600px;
+}
+
+.title {
+  font-size: 28.13px;
+}
+
+.welcomeText {
+  font-size: 14.4px;
+  color: grey;
+  margin-top: 8px;
+}
+
+.firstNameLable,
+.lastNameLable,
+.emailLable {
+  font-size: 14.4px;
+}
+
+.firstName,
+.lastName,
+.email {
+  border: 1px solid black;
+  padding: 8px 16px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.form {
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

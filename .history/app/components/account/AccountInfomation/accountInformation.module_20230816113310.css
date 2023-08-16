@@ -1,0 +1,101 @@
+.main {
+  padding: 32px;
+  max-width: 900px;
+}
+
+.title {
+  font-size: 28.13px;
+}
+
+.welcomeText {
+  font-size: 14.4px;
+  color: grey;
+  margin-top: 8px;
+}
+
+.firstNameLable,
+.lastNameLable,
+.emailLable {
+  font-size: 14.4px;
+  font-weight: 600;
+}
+
+.nameContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.firstName,
+.lastName,
+.email {
+  border: 1px solid black;
+  padding: 8px 16px;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.form {
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 16px;
+}
+.discardChanges,
+.saveChanges {
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+}
+
+.discardChanges {
+  color: black;
+  background-color: transparent;
+}
+
+.saveChanges {
+  padding: 8px 16px;
+  border-radius: 50px;
+  background-color: var(--primary);
+  color: white;
+}
+
+.saveChanges:hover {
+  background-color: #ff8b8d;
+}
+
+@media (max-width: 778px) {
+  .nameContainer {
+    grid-template-columns: 1fr;
+  }
+  .email,
+  .lastName,
+  .firstName,
+  .discardChanges,
+  .saveChanges {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .welcomeText,
+  .firstNameLable,
+  .lastNameLable,
+  .emailLable {
+    font-size: 12.8px;
+  }
+}

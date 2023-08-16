@@ -1,0 +1,36 @@
+.container {
+  background-color: var(--primary);
+  position: fixed;
+  height: 100vh;
+
+  padding: 32px;
+}
+
+.infoOverView {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.fullNameOverView {
+  color: white;
+  font-size: 14.4px;
+  font-weight: 500;
+}
+
+.emailOverView {
+  color: white;
+  font-size: 14.4px;
+}
+
+.overViewTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.photo {
+  width: 70px;
+  height: 70px;
+  background-color: blacl;
+  border-radius: 50%;
+}
