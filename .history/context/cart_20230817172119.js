@@ -75,9 +75,10 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const cartItems = localStorage.getItem("cartItems");
-      if (cartItems) {
-        setCartItems(JSON.parse(cartItems));
-      }
+    }
+
+    if (cartItems) {
+      setCartItems(JSON.parse(cartItems));
     }
   }, []);
 

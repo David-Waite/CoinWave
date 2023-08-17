@@ -67,17 +67,13 @@ export const CartProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    }
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const cartItems = localStorage.getItem("cartItems");
-      if (cartItems) {
-        setCartItems(JSON.parse(cartItems));
-      }
+    const cartItems = localStorage.getItem("cartItems");
+    if (cartItems) {
+      setCartItems(JSON.parse(cartItems));
     }
   }, []);
 
