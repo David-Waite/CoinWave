@@ -1,0 +1,11 @@
+:root {
+  --primary: #fc9d9f;
+  --primaryHover: #ff8b8d;
+  --black: "";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
