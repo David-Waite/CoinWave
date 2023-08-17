@@ -17,7 +17,7 @@ export default function Cart() {
   } = useContext(CartContext);
 
   if (!cartItems) {
-    return;
+    return <>Nothing to see here</>;
   }
   function handleFocusOut(productId, quantity) {
     if (quantity.length === 0 || quantity === 1) {

@@ -7,17 +7,10 @@ import { MdOutlineClose } from "react-icons/md";
 import { useState } from "react";
 
 export default function Cart() {
-  const {
-    cartItems,
-
-    removeFromCart,
-    clearCart,
-    getCartTotal,
-    updateQuantity,
-  } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
 
   if (!cartItems) {
-    return;
+    return <></>;
   }
   function handleFocusOut(productId, quantity) {
     if (quantity.length === 0 || quantity === 1) {
