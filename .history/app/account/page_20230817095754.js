@@ -5,8 +5,28 @@ import AccountMenu from "../components/account/AccountMenu/AccountMenu";
 import AccountInformation from "../components/account/AccountInfomation/AccountInfomation";
 import SellProduct from "../components/account/SellProduct/SellProduct";
 import PurchaseHistroy from "../components/account/PurchaseHistory/PurchaseHistory";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function Account() {
+  const [windowSize, setWindowSize] = useState(undefined);
+
+  useEffect(() => {
+    // only execute all the code below in client side
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width/height to state
+      setWindowSize(window.innerWidth);
+    }
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Empty array ensures that effect is only run on mount
+
   const [selected, setSelected] = useState({
     accountInformation: true,
     sellProduct: false,
@@ -23,7 +43,11 @@ export default function Account() {
 
   return (
     <div className={styles.main}>
-      <AccountMenu selected={selected} onClick={handleMenuSelect} />
+      <AccountMenu
+        selected={selected}
+        onClick={handleMenuSelect}
+        screenSize={windowSize}
+      />
 
       <main className={styles.mainContent}>
         {selected.accountInformation && <AccountInformation />}

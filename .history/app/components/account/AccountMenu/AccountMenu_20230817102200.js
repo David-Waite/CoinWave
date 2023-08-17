@@ -26,6 +26,10 @@ export default function AccountMenu(props) {
     color: "transparent",
   };
 
+  const openMenuText = {
+    color: "white",
+  };
+
   const collapseMenuIcon = {
     left: "3px",
   };

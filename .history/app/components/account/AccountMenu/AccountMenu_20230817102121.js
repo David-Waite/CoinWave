@@ -5,12 +5,11 @@ import { useEffect, useState } from "react";
 import useWindowDimensions from "@/app/hooks/useWindowDimenstions";
 
 export default function AccountMenu(props) {
-  const { width } = useWindowDimensions();
+  const { width, height } = useWindowDimensions();
 
   useEffect(() => {
     setCollapseMenu(width < 778 ? true : false);
   }, [width]);
-
   const [collapseMenu, setCollapseMenu] = useState(width < 778 ? true : false);
   function handleClick(select) {
     props.onClick(select);
@@ -24,6 +23,10 @@ export default function AccountMenu(props) {
 
   const collapseMenuText = {
     color: "transparent",
+  };
+
+  const openMenuText = {
+    color: "white",
   };
 
   const collapseMenuIcon = {

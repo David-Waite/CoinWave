@@ -5,7 +5,7 @@ import AccountMenu from "../components/account/AccountMenu/AccountMenu";
 import AccountInformation from "../components/account/AccountInfomation/AccountInfomation";
 import SellProduct from "../components/account/SellProduct/SellProduct";
 import PurchaseHistroy from "../components/account/PurchaseHistory/PurchaseHistory";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function Account() {
   const [selected, setSelected] = useState({
     accountInformation: true,
@@ -23,7 +23,11 @@ export default function Account() {
 
   return (
     <div className={styles.main}>
-      <AccountMenu selected={selected} onClick={handleMenuSelect} />
+      <AccountMenu
+        selected={selected}
+        onClick={handleMenuSelect}
+        screenSize={windowSize}
+      />
 
       <main className={styles.mainContent}>
         {selected.accountInformation && <AccountInformation />}

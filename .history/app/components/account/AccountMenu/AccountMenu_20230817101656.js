@@ -1,17 +1,13 @@
 import styles from "./accountMenu.module.css";
 import { RiExpandLeftRightLine } from "react-icons/ri";
 import { MdHistory, MdHome, MdSell } from "react-icons/md";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useWindowDimensions from "@/app/hooks/useWindowDimenstions";
 
 export default function AccountMenu(props) {
-  const { width } = useWindowDimensions();
-
-  useEffect(() => {
-    setCollapseMenu(width < 778 ? true : false);
-  }, [width]);
-
-  const [collapseMenu, setCollapseMenu] = useState(width < 778 ? true : false);
+  const { width, height } = useWindowDimensions();
+  console.log(width);
+  const [collapseMenu, setCollapseMenu] = useState(false);
   function handleClick(select) {
     props.onClick(select);
   }
@@ -24,6 +20,10 @@ export default function AccountMenu(props) {
 
   const collapseMenuText = {
     color: "transparent",
+  };
+
+  const openMenuText = {
+    color: "white",
   };
 
   const collapseMenuIcon = {

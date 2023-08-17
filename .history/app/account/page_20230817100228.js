@@ -5,7 +5,7 @@ import AccountMenu from "../components/account/AccountMenu/AccountMenu";
 import AccountInformation from "../components/account/AccountInfomation/AccountInfomation";
 import SellProduct from "../components/account/SellProduct/SellProduct";
 import PurchaseHistroy from "../components/account/PurchaseHistory/PurchaseHistory";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function Account() {
   const [selected, setSelected] = useState({
     accountInformation: true,
