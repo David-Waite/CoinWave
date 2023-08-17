@@ -1,0 +1,94 @@
+.container {
+  background-color: var(--primary);
+  position: absolute;
+  height: calc(100vh - 66px);
+  width: 279px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.infoOverView {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 32px;
+}
+
+.fullNameOverView {
+  color: white;
+  font-size: 14.4px;
+  font-weight: 500;
+}
+
+.emailOverView {
+  color: white;
+  font-size: 14.4px;
+}
+
+.overViewTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.linkContainer {
+  padding: 16px 0;
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 16px;
+  height: 65px;
+  padding-left: 32px;
+  border-top: 1px solid black;
+  cursor: pointer;
+}
+
+.linkContainer p {
+  position: absolute;
+  margin-left: 40px;
+  width: 200px;
+}
+.linkContainer:hover {
+  background-color: #fa8284;
+}
+
+.menuIcons {
+  position: absolute;
+  color: white;
+  font-size: 32px;
+  left: 30px;
+  transition: 0.3s;
+}
+
+.linkContainerBottom {
+  border-bottom: 1px solid black;
+}
+
+.linkContainer p {
+  padding-right: 32px;
+  color: white;
+}
+
+.expandBtn {
+  cursor: pointer;
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  color: white;
+}
+
+.linkText {
+  font-size: 16px;
+}
+
+@media (max-width: 778px) {
+  .emailOverView,
+  .fullNameOverView {
+    font-size: 12.8px;
+  }
+
+  .linkText {
+    font-size: 16px;
+  }
+}

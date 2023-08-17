@@ -1,0 +1,63 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 60px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.homeLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  font-weight: 600;
+}
+
+.loginLink {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bagIcon {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+.cartAmount {
+  position: absolute;
+  background-color: red;
+  color: white;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+@media (max-width: 1600px) {
+  .main {
+    padding: 16px 32px;
+  }
+}
+@media (max-width: 778px) {
+  .main {
+    padding: 16px;
+  }
+  .loginLink,
+  .homeLink {
+    font-size: 16px;
+  }
+}

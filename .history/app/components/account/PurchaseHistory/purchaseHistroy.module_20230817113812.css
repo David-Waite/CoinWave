@@ -1,0 +1,19 @@
+.main {
+  padding: 32px;
+}
+.title {
+  font-size: 28.13px;
+}
+
+.table th {
+  font-weight: bold;
+  background-color: white;
+  height: 60px;
+}
+
+.table {
+  border-collapse: collapse;
+}
+.table tr:nth-child(odd) {
+  background-color: #777;
+}

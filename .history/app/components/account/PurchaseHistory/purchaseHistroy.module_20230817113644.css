@@ -1,0 +1,26 @@
+.main {
+  padding: 32px;
+}
+.title {
+  font-size: 28.13px;
+}
+
+.table th {
+  font-weight: bold;
+  background-color: #203c87;
+  height: 60px;
+  color: white;
+}
+.table th,
+.table tr,
+.table td {
+  text-align: center;
+}
+
+.table {
+  border-collapse: collapse;
+  border: #eeeeee;
+}
+.table tr:nth-child(odd) {
+  background-color: #777;
+}

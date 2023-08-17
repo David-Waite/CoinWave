@@ -1,0 +1,9 @@
+.container {
+  padding: 32px;
+  display: flex;
+}
+
+.cart,
+.summary {
+  border: 1px solid grey;
+}

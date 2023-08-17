@@ -1,0 +1,27 @@
+.main {
+  padding: 32px;
+}
+.title {
+  font-size: 28.13px;
+}
+
+.table th {
+  font-weight: bold;
+  background-color: white;
+}
+
+.table thead {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.table td,
+.table th {
+  height: 52px;
+}
+
+.table {
+  border-collapse: collapse;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.table tr:nth-child(even) {
+  background-color: #f3f4f7;
+}

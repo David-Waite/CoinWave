@@ -1,0 +1,20 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.cart,
+.summary {
+  border: 1px solid grey;
+  min-height: calc(100vh - 68px);
+}
+
+.summaryContent,
+.cartContetn {
+  display: flex;
+  flex-direction: column;
+  padding: 64px;
+  justify-content: center;
+  min-height: calc(100vh - 68px);
+}

@@ -1,0 +1,47 @@
+.main {
+  padding: 32px;
+}
+.title {
+  font-size: 28.13px;
+}
+
+.main th {
+  font-weight: bold;
+  background-color: #203c87;
+  height: 60px;
+  color: white;
+}
+.main th,
+.main tr,
+.main td {
+  text-align: center;
+}
+
+.main table {
+  border-collapse: collapse;
+  border: #eeeeee;
+}
+.main tr:nth-child(odd) {
+  color: #777;
+}
+
+.topTd {
+  border-bottom: none;
+}
+.continueTd {
+  border-top: none;
+}
+
+.tableHeader {
+  margin: 50px 20px 10px;
+  color: #203c87;
+  font-size: 24px;
+}
+
+.tableHeader span {
+  font-weight: 200;
+}
+.main table {
+  margin: 20px;
+  width: calc(100% - 40px);
+}

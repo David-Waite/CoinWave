@@ -1,0 +1,52 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.cart,
+.summary {
+  border: 1px solid grey;
+  min-height: calc(100vh - 68px);
+}
+
+.title {
+  padding: 0 64px;
+  margin-top: 64px;
+  font-size: 28.13px;
+  font-weight: 400;
+}
+
+.summaryContent,
+.cartContent {
+  display: flex;
+  flex-direction: column;
+  padding: 64px;
+  justify-content: center;
+  min-height: calc(100vh - 172px);
+}
+
+.table {
+  border-collapse: collapse;
+}
+.table th {
+  height: 60px;
+  text-align: left;
+  border-top: 1px solid grey;
+}
+
+.table tr {
+  border-bottom: 1px solid grey;
+}
+
+.table td,
+.table th {
+  font-size: 18px;
+  padding: 0px 24px;
+}
+
+.imageContainer {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
