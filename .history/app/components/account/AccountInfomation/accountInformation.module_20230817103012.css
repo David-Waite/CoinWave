@@ -82,10 +82,7 @@
   }
 
   .form {
-    padding: 32px 0px 16px 0px;
-  }
-  .discardChanges {
-    font-size: 12.8px;
+    padding: 0px 32px 16px 22px;
   }
 
   .buttonContainer {
@@ -100,6 +97,7 @@
   .email,
   .lastName,
   .firstName,
+  .discardChanges,
   .saveChanges {
     font-size: 16px;
   }

@@ -77,6 +77,10 @@
 }
 
 @media (max-width: 778px) {
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+  }
   .main {
     padding: 32px 16px;
   }

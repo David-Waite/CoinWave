@@ -85,6 +85,7 @@
     padding: 32px 0px 16px 0px;
   }
   .discardChanges {
+    align-self: flex-start;
     font-size: 12.8px;
   }
 

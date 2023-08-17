@@ -1,8 +1,14 @@
 .main {
-  padding: 32px;
   max-width: 900px;
+  padding: 32px;
 }
 
+.formContainer {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+}
 .title {
   font-size: 28.13px;
 }
@@ -13,9 +19,7 @@
   margin-top: 8px;
 }
 
-.firstNameLable,
-.lastNameLable,
-.emailLable {
+.lable {
   font-size: 14.4px;
   font-weight: 600;
 }
@@ -26,14 +30,13 @@
   gap: 16px;
 }
 
-.firstName,
-.lastName,
-.email {
+.input {
   border: 1px solid black;
   padding: 8px 16px;
   font-size: 18px;
   border-radius: 10px;
   width: 100%;
+  max-width: 1000px;
 }
 
 .form {
@@ -47,11 +50,13 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  width: 100%;
 }
 
 .buttonContainer {
   display: flex;
-  gap: 16px;
+  flex-direction: column;
 }
 .discardChanges,
 .saveChanges {
@@ -84,22 +89,14 @@
   .form {
     padding: 32px 0px 16px 0px;
   }
-  .discardChanges {
-    font-size: 12.8px;
-  }
 
-  .buttonContainer {
-    flex-direction: column;
-  }
-  .discardChanges {
-    font-size: 12.8px;
-  }
   .nameContainer {
     grid-template-columns: 1fr;
   }
   .email,
   .lastName,
   .firstName,
+  .discardChanges,
   .saveChanges {
     font-size: 16px;
   }
