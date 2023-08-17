@@ -20,7 +20,7 @@ export default function Cart() {
     return;
   }
   function handleFocusOut(productId, quantity) {
-    if (quantity.length === 0 || quantity < 0) {
+    if (quantity.length === 0 || quantity === 1) {
       updateQuantity(productId, 1);
     }
   }
