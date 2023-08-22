@@ -312,7 +312,7 @@ export default function ProductLists() {
     {
       id: 31,
       description: 'Loot box pirate chest membership',
-      category: 'membership',
+      category: 'memberships',
       productName: 'Golden Chest of Glowing Lootbox membership',
       imageURL: '/Golden Chest of Glowing.png',
       altText: 'Golden Chest of Glowing',
@@ -322,7 +322,7 @@ export default function ProductLists() {
     {
       id: 32,
       description: 'One Legendary Frost Egg a month in Frost Dragons NFT game',
-      category: 'membership',
+      category: 'memberships',
       productName: 'Membership to Frost Dragons',
       imageURL: '/Legendary Frost Egg.png',
       altText: 'Legendary Frost Egg',
