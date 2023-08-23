@@ -10,24 +10,28 @@ export default function Home() {
       title: "The Golden Collection",
       from: "AmbiBambi",
       price: 12,
+      productId: 1,
     },
     {
       image: "/slideshowImage2.png",
       title: "Dummy title 2",
       from: "Mary Jane",
       price: 0.1,
+      productId: 2,
     },
     {
       image: "/slideshowImage3.png",
       title: "Dummy title 3",
       from: "Lucy Sky",
       price: 16,
+      productId: 3,
     },
     {
       image: "/slideshowImage4.png",
       title: "Dummy title 4",
       from: "Peter Rabbit",
       price: 4,
+      productId: 4,
     },
   ];
   return (
