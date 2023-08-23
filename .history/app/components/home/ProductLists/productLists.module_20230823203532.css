@@ -8,17 +8,11 @@
 
 .noResults {
   text-align: center;
-  color: white;
-  font-size: 18px;
-  margin-top: 80px;
 }
 @media (max-width: 778px) {
   .menuContainer {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-  }
-  .noResults {
-    font-size: 16px;
   }
 }

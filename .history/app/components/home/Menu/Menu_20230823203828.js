@@ -62,15 +62,7 @@ export default function Menu(props) {
         </p>
       </div>
       <div onClick={() => handleClick("photography")}>
-        <p
-          style={Object.assign(
-            props.selected === "photography"
-              ? selectedP
-              : props.selected === ""
-              ? selectedP
-              : ""
-          )}
-        >
+        <p style={Object.assign(props.selected === "photography" && selectedP)}>
           Photography
         </p>
       </div>

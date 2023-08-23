@@ -21,56 +21,20 @@ export default function Menu(props) {
     <div className={styles.container}>
       <div onClick={() => handleClick("art")}>
         {/* styles are added if the selected prop matches the category */}
-        <p
-          style={Object.assign(
-            props.selected === "art"
-              ? selectedP
-              : props.selected === ""
-              ? selectedP
-              : ""
-          )}
-        >
-          Art
-        </p>
+        <p style={Object.assign(props.selected === "art" && selectedP)}>Art</p>
       </div>
 
       <div onClick={() => handleClick("memberships")}>
-        <p
-          style={Object.assign(
-            props.selected === "memberships"
-              ? selectedP
-              : props.selected === ""
-              ? selectedP
-              : ""
-          )}
-        >
+        <p style={Object.assign(props.selected === "memberships" && selectedP)}>
           Memberships
         </p>
       </div>
 
       <div onClick={() => handleClick("pfp")}>
-        <p
-          style={Object.assign(
-            props.selected === "pfp"
-              ? selectedP
-              : props.selected === ""
-              ? selectedP
-              : ""
-          )}
-        >
-          PFP
-        </p>
+        <p style={Object.assign(props.selected === "pfp" && selectedP)}>PFP</p>
       </div>
       <div onClick={() => handleClick("photography")}>
-        <p
-          style={Object.assign(
-            props.selected === "photography"
-              ? selectedP
-              : props.selected === ""
-              ? selectedP
-              : ""
-          )}
-        >
+        <p style={Object.assign(props.selected === "photography" && selectedP)}>
           Photography
         </p>
       </div>

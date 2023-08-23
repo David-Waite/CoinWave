@@ -35,42 +35,16 @@ export default function Menu(props) {
       </div>
 
       <div onClick={() => handleClick("memberships")}>
-        <p
-          style={Object.assign(
-            props.selected === "memberships"
-              ? selectedP
-              : props.selected === ""
-              ? selectedP
-              : ""
-          )}
-        >
+        <p style={Object.assign(props.selected === "memberships" && selectedP)}>
           Memberships
         </p>
       </div>
 
       <div onClick={() => handleClick("pfp")}>
-        <p
-          style={Object.assign(
-            props.selected === "pfp"
-              ? selectedP
-              : props.selected === ""
-              ? selectedP
-              : ""
-          )}
-        >
-          PFP
-        </p>
+        <p style={Object.assign(props.selected === "pfp" && selectedP)}>PFP</p>
       </div>
       <div onClick={() => handleClick("photography")}>
-        <p
-          style={Object.assign(
-            props.selected === "photography"
-              ? selectedP
-              : props.selected === ""
-              ? selectedP
-              : ""
-          )}
-        >
+        <p style={Object.assign(props.selected === "photography" && selectedP)}>
           Photography
         </p>
       </div>

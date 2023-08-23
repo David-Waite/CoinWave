@@ -512,7 +512,7 @@ export default function ProductLists() {
     selectedItems.length > 0 ? (
       <ProductCards items={selectedItems} />
     ) : (
-      <div className={styles.noResults}>Nothing matches your search</div>
+      <div>Nothing matches your search</div>
     );
 
   // jsx to be returned

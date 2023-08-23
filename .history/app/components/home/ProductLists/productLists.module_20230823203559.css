@@ -18,7 +18,4 @@
     align-items: flex-start;
     gap: 16px;
   }
-  .noResults {
-    font-size: 16px;
-  }
 }
