@@ -1,6 +1,5 @@
 "use client";
 
-// nav bar
 import styles from "./nav.module.css";
 import Link from "next/link";
 import { MdAccountCircle } from "react-icons/md";
@@ -9,11 +8,7 @@ import { useContext } from "react";
 import { CartContext } from "@/context/cart";
 
 export default function Nav() {
-  // imports cart items to get account of items in cart to display in nav
-
   const { cartItems } = useContext(CartContext);
-
-  // jsx for nar bar
   return (
     <nav className={styles.main}>
       <Link className={styles.homeLink} href="/">

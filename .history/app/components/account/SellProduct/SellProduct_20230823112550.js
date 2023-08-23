@@ -5,7 +5,6 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function SellProduct() {
-  // data stored in state for the form
   const [formData, setFormData] = useState({
     itemName: "",
     category: "",
@@ -16,7 +15,6 @@ export default function SellProduct() {
 
   const router = useRouter();
 
-  // function that updates the form data when the form is changed
   function handleChange(event) {
     const { type, name, value, checked } = event.target;
     setFormData((prevFormData) => {
@@ -27,14 +25,12 @@ export default function SellProduct() {
     });
   }
 
-  // function to be triggered when the submit button is pressed
   function handleSubmit(event) {
     event.preventDefault();
 
     router.push("/account");
   }
 
-  // jsx to return the form
   return (
     <main className={styles.main}>
       <form onSubmit={handleSubmit} className={styles.formContainer}>

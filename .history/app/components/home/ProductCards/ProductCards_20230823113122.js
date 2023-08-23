@@ -34,7 +34,5 @@ export default function ProductCards(props) {
       </Link>
     );
   });
-
-  // returns all the products
   return <div className={styles.container}>{cardElements}</div>;
 }

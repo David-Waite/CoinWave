@@ -15,7 +15,7 @@ export default function AccountInformation() {
 
   const router = useRouter();
 
-  // function for handling the change on the form
+  // function for
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -27,7 +27,6 @@ export default function AccountInformation() {
     });
   }
 
-  //function to be triggered when the update button is clicked
   function handleSubmit(event) {
     event.preventDefault();
 

@@ -8,7 +8,6 @@ import ProductCards from "../ProductCards/ProductCards";
 import SearchBar from "../SearchBar/SearchBar";
 
 export default function ProductLists() {
-  // dummy data for each of the products
   const ITEMSDUMMY = [
     {
       id: 1,
@@ -376,18 +375,14 @@ export default function ProductLists() {
     },
   ];
 
-  // logic for the menu can filter
-
   const [selected, setSelected] = useState("");
   const [selectedItems, setSelectedItems] = useState(ITEMSDUMMY);
 
-  // when a category is selected sets the selected items to the value passed in
   function handleMenuSelect(select) {
     setSelected(select);
     setSelectedItems(selectItemsByCategory(select));
   }
 
-  // function to handle search bar, filters items by title
   function handleSearch(searchQueryInput) {
     if (searchQueryInput != "") {
       console.log(searchQueryInput);
@@ -397,14 +392,12 @@ export default function ProductLists() {
     }
   }
 
-  // function to select items by category, returns all if the same item is pressed again
   function selectItemsByCategory(select) {
     return ITEMSDUMMY.filter((item) =>
       item.category === select ? item : select === "" && item
     );
   }
 
-  // function to handle search bar, filters items by title
   function selectItemsBySearch(search) {
     let filteredItems = [];
     ITEMSDUMMY.forEach((item) => {
@@ -416,15 +409,12 @@ export default function ProductLists() {
     return filteredItems;
   }
 
-  // returns nothing to see if no items match the search
   const productCardsElement =
     selectedItems.length > 0 ? (
       <ProductCards items={selectedItems} />
     ) : (
       <div>nothing to see</div>
     );
-
-  // jsx to be returned
   return (
     <main className={styles.container}>
       <div className={styles.menuContainer}>

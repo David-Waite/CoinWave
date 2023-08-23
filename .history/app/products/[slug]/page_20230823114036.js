@@ -1,14 +1,13 @@
 "use client";
-// list of products
-import styles from "./productLists.module.css";
+// product page
+import Image from "next/image";
+import styles from "./productAbout.module.css";
+import Link from "next/link";
+import { CartContext } from "../../../context/cart";
+import { useContext } from "react";
 
-import { useState } from "react";
-import Menu from "../Menu/Menu";
-import ProductCards from "../ProductCards/ProductCards";
-import SearchBar from "../SearchBar/SearchBar";
-
-export default function ProductLists() {
-  // dummy data for each of the products
+export default function Page({ params }) {
+  const { cartItems, addToCart } = useContext(CartContext);
   const ITEMSDUMMY = [
     {
       id: 1,
@@ -337,7 +336,7 @@ export default function ProductLists() {
     {
       id: 31,
       description: "Loot box pirate chest membership",
-      category: "memberships",
+      category: "membership",
       productName: "Golden Chest of Glowing Lootbox membership",
       imageURL: "/Golden Chest of Glowing.png",
       altText: "Golden Chest of Glowing",
@@ -347,7 +346,7 @@ export default function ProductLists() {
     {
       id: 32,
       description: "One Legendary Frost Egg a month in Frost Dragons NFT game",
-      category: "memberships",
+      category: "membership",
       productName: "Membership to Frost Dragons",
       imageURL: "/Legendary Frost Egg.png",
       altText: "Legendary Frost Egg",
@@ -376,64 +375,49 @@ export default function ProductLists() {
     },
   ];
 
-  // logic for the menu can filter
+  const selectedItem = ITEMSDUMMY.filter((item) => item.id == params.slug)[0];
 
-  const [selected, setSelected] = useState("");
-  const [selectedItems, setSelectedItems] = useState(ITEMSDUMMY);
-
-  // when a category is selected sets the selected items to the value passed in
-  function handleMenuSelect(select) {
-    setSelected(select);
-    setSelectedItems(selectItemsByCategory(select));
-  }
-
-  // function to handle search bar, filters items by title
-  function handleSearch(searchQueryInput) {
-    if (searchQueryInput != "") {
-      console.log(searchQueryInput);
-      setSelectedItems(selectItemsBySearch(searchQueryInput));
-    } else {
-      setSelectedItems(selectItemsByCategory(selected));
-    }
-  }
-
-  // function to select items by category, returns all if the same item is pressed again
-  function selectItemsByCategory(select) {
-    return ITEMSDUMMY.filter((item) =>
-      item.category === select ? item : select === "" && item
-    );
-  }
-
-  // function to handle search bar, filters items by title
-  function selectItemsBySearch(search) {
-    let filteredItems = [];
-    ITEMSDUMMY.forEach((item) => {
-      if (item.productName.toLowerCase().includes(search.toLowerCase())) {
-        filteredItems.push(item);
-      }
-    });
-
-    return filteredItems;
-  }
-
-  // returns nothing to see if no items match the search
-  const productCardsElement =
-    selectedItems.length > 0 ? (
-      <ProductCards items={selectedItems} />
-    ) : (
-      <div>nothing to see</div>
-    );
-
-  // jsx to be returned
   return (
-    <main className={styles.container}>
-      <div className={styles.menuContainer}>
-        <Menu selected={selected} onClick={handleMenuSelect} />
+    <div className={styles.container}>
+      <Link className={styles.backBtn} href={"/"}>
+        Back
+      </Link>
+      <div className={styles.contentContainer}>
+        <div className={styles.card}>
+          <div className={styles.imageContainer}>
+            <Image
+              src={selectedItem.imageURL}
+              fill={true}
+              alt={selectedItem.altText}
+              objectFit="contain"
+            />
+          </div>
+        </div>
 
-        <SearchBar onChange={(e) => handleSearch(e.target.value)} />
+        <div className={styles.infoContainer}>
+          <div className={styles.card}>
+            <p className={styles.smallTitle}>{selectedItem.author}</p>
+            <h1>{selectedItem.productName}</h1>
+          </div>
+
+          <div className={styles.card}>
+            <h2 className={styles.smallTitle}>Description</h2>
+            <p className={styles.text}>{selectedItem.description}</p>
+          </div>
+          <div className={styles.card}>
+            <h2 className={styles.smallTitle}>Price</h2>
+            <p className={`${styles.text} ${styles.price}`}>
+              {selectedItem.price} ETH <span>$120</span>
+            </p>
+            <button
+              className={styles.addToCartBtn}
+              onClick={() => addToCart(selectedItem)}
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
       </div>
-
-      {productCardsElement}
-    </main>
+    </div>
   );
 }

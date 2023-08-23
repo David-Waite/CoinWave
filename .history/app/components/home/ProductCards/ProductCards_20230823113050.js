@@ -4,7 +4,6 @@ import styles from "./productCards.module.css";
 import Link from "next/link";
 
 export default function ProductCards(props) {
-  // maps over the product props and returns a card for each item that links to the page of each product
   const cardElements = props.items.map((item) => {
     return (
       <Link className={styles.link} key={item.id} href={`/products/${item.id}`}>
@@ -34,7 +33,5 @@ export default function ProductCards(props) {
       </Link>
     );
   });
-
-  // returns all the products
   return <div className={styles.container}>{cardElements}</div>;
 }

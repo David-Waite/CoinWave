@@ -35,7 +35,6 @@ export default function Login() {
     router.push("/account");
   }
 
-  //jsx to be returned
   return (
     <main className={styles.main}>
       <form onSubmit={handleSubmit}>

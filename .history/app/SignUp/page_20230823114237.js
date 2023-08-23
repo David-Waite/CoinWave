@@ -1,22 +1,22 @@
 "use client";
-
-// login page
-import styles from "./login.module.css";
+// sign up page
+import styles from "./signUp.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-export default function Login() {
-  // form data saved in form
+export default function SignUp() {
+  // form data saved in state
   const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
-    rememberMe: false,
   });
 
   const router = useRouter();
 
-  // updates form state baced on input changes
+  // function updating state whenever the value of an input is changed
   function handleChange(event) {
     const { type, name, value, checked } = event.target;
     setFormData((prevFormData) => {
@@ -27,19 +27,32 @@ export default function Login() {
     });
   }
 
-  //function to be returned when login button is pressed
-
+  // function to be triggered when sign up button is pressed
   function handleSubmit(event) {
     event.preventDefault();
-
     router.push("/account");
   }
 
-  //jsx to be returned
   return (
     <main className={styles.main}>
       <form onSubmit={handleSubmit}>
-        <h1 className={styles.title}>Login</h1>
+        <h1 className={styles.title}>Sign Up</h1>
+        <input
+          className={styles.firstName}
+          type="text"
+          placeholder="First Name"
+          onChange={handleChange}
+          name="firstName"
+          value={formData.firstName}
+        />
+        <input
+          className={styles.lastName}
+          type="text"
+          placeholder="Last Name"
+          onChange={handleChange}
+          name="lastName"
+          value={formData.lastName}
+        />
         <input
           className={styles.email}
           type="email"
@@ -57,23 +70,9 @@ export default function Login() {
           value={formData.password}
         />
 
-        <div className={styles.rememberMeContainer}>
-          <input
-            className={styles.rememberMeCheckbox}
-            type="checkbox"
-            id="rememberMe"
-            checked={formData.rememberMe}
-            onChange={handleChange}
-            name="rememberMe"
-          />
-          <label className={styles.rememberMeText} htmlFor="rememberMe">
-            remember me
-          </label>
-        </div>
-
-        <button className={styles.loginBtn}>Login</button>
-        <Link className={styles.signUp} href={"/signUp"}>
-          or create an account
+        <button className={styles.loginBtn}>Create Account</button>
+        <Link className={styles.login} href={"/login"}>
+          already got an account? Log in
         </Link>
       </form>
     </main>

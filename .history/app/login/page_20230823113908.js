@@ -1,13 +1,11 @@
 "use client";
 
-// login page
 import styles from "./login.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function Login() {
-  // form data saved in form
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -16,7 +14,6 @@ export default function Login() {
 
   const router = useRouter();
 
-  // updates form state baced on input changes
   function handleChange(event) {
     const { type, name, value, checked } = event.target;
     setFormData((prevFormData) => {
@@ -27,15 +24,12 @@ export default function Login() {
     });
   }
 
-  //function to be returned when login button is pressed
-
   function handleSubmit(event) {
     event.preventDefault();
 
     router.push("/account");
   }
 
-  //jsx to be returned
   return (
     <main className={styles.main}>
       <form onSubmit={handleSubmit}>

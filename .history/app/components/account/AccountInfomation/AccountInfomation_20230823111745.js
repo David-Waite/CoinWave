@@ -6,7 +6,6 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function AccountInformation() {
-  // form for the account information can be updated
   const [formData, setFormData] = useState({
     firstName: "John",
     lastName: "Doe",
@@ -15,19 +14,16 @@ export default function AccountInformation() {
 
   const router = useRouter();
 
-  // function for handling the change on the form
-
   function handleChange(event) {
-    const { name, value } = event.target;
+    const { type, name, value, checked } = event.target;
     setFormData((prevFormData) => {
       return {
         ...prevFormData,
-        [name]: value,
+        [name]: type === "checkbox" ? checked : value,
       };
     });
   }
 
-  //function to be triggered when the update button is clicked
   function handleSubmit(event) {
     event.preventDefault();
 

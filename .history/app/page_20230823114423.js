@@ -31,8 +31,6 @@ export default function Home() {
       price: 4,
     },
   ];
-
-  // jsx to be returned
   return (
     <main>
       <SlideShow slides={slides} />

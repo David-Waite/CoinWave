@@ -4,7 +4,6 @@ import SlideShow from "./components/home/Slideshow/Slideshow";
 import ProductLists from "./components/home/ProductLists/ProductLists";
 
 export default function Home() {
-  // data for slideshow slides
   const slides = [
     {
       image: "/slideshowImage1.png",
@@ -31,8 +30,6 @@ export default function Home() {
       price: 4,
     },
   ];
-
-  // jsx to be returned
   return (
     <main>
       <SlideShow slides={slides} />

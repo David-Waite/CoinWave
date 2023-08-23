@@ -6,7 +6,6 @@ import { createContext, useState, useEffect } from "react";
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  // check localstorage for cart
   const [cartItems, setCartItems] = useState(() => {
     if (typeof window !== "undefined") {
       return localStorage.getItem("cartItems")
@@ -14,8 +13,6 @@ export const CartProvider = ({ children }) => {
         : [];
     }
   });
-
-  // add to cart function
   const addToCart = (item) => {
     const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id);
 
@@ -32,7 +29,6 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  // update quantity function
   const updateQuantity = (id, quantity) => {
     const isItemInCart = cartItems.find((cartItem) => cartItem.id === id);
 
@@ -44,8 +40,6 @@ export const CartProvider = ({ children }) => {
       );
     }
   };
-
-  // remove form cart function
   const removeFromCart = (item) => {
     const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id);
 
@@ -62,12 +56,10 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  // clear cart function
   const clearCart = () => {
     setCartItems([]);
   };
 
-  // gets cart total function
   const getCartTotal = () => {
     return cartItems.reduce(
       (total, item) => total + item.price * item.quantity,
@@ -75,13 +67,12 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  // useeffect to get set localStage
   useEffect(() => {
     if (typeof window !== "undefined") {
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
     }
   }, [cartItems]);
-  // useeffect to get set localStage
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       const cartItems = localStorage.getItem("cartItems");
