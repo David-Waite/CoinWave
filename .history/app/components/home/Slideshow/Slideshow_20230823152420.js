@@ -111,7 +111,7 @@ export default function SlideShow({ slides }) {
 
   const selectElements = slides.map((image) => {
     const postion = slides.findIndex((element) => element === image) + 1;
-
+    console.log(postion);
     return (
       <div
         className={styles.selectElement}

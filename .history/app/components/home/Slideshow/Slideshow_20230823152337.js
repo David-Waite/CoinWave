@@ -111,11 +111,11 @@ export default function SlideShow({ slides }) {
 
   const selectElements = slides.map((image) => {
     const postion = slides.findIndex((element) => element === image) + 1;
-
+    console.log(image);
     return (
       <div
         className={styles.selectElement}
-        key={postion}
+        key={image.id}
         onClick={() => setIndex(postion)}
         style={{
           backgroundColor:

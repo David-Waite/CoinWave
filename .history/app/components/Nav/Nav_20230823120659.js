@@ -5,18 +5,13 @@ import styles from "./nav.module.css";
 import Link from "next/link";
 import { MdAccountCircle } from "react-icons/md";
 import { BsBagFill } from "react-icons/bs";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { CartContext } from "@/context/cart";
 
 export default function Nav() {
   // imports cart items to get account of items in cart to display in nav
 
-  const [cartItemAmount, setCartItemsAmount] = useState();
   const { cartItems } = useContext(CartContext);
-
-  useEffect(() => {
-    setCartItemsAmount(cartItems.length);
-  }, [cartItems]);
 
   // jsx for nar bar
   return (
@@ -61,7 +56,7 @@ export default function Nav() {
         <Link href="/cart" className={styles.bagIcon}>
           <div>
             <div className={styles.cartAmount}>
-              <p>{cartItemAmount}</p>
+              <p>{cartItems && cartItems.length}</p>
             </div>
 
             <BsBagFill size={24} />

@@ -115,7 +115,7 @@ export default function SlideShow({ slides }) {
     return (
       <div
         className={styles.selectElement}
-        key={postion}
+        key={image}
         onClick={() => setIndex(postion)}
         style={{
           backgroundColor:

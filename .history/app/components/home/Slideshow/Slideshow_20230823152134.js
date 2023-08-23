@@ -81,7 +81,7 @@ export default function SlideShow({ slides }) {
 
   const imageElements = imagesUpdated.map((slide) => {
     const postion = slide.id;
-    console.log(slide.id);
+
     return (
       <div
         key={slide.id}
@@ -115,7 +115,7 @@ export default function SlideShow({ slides }) {
     return (
       <div
         className={styles.selectElement}
-        key={postion}
+        key={image}
         onClick={() => setIndex(postion)}
         style={{
           backgroundColor:

@@ -61,7 +61,7 @@ export default function Nav() {
         <Link href="/cart" className={styles.bagIcon}>
           <div>
             <div className={styles.cartAmount}>
-              <p>{cartItemAmount}</p>
+              <p>{cartItems ? cartItems.length : ""}</p>
             </div>
 
             <BsBagFill size={24} />
