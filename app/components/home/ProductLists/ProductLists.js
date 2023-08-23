@@ -11,6 +11,36 @@ export default function ProductLists() {
   // dummy data for each of the products
   const ITEMSDUMMY = [
     {
+      id: 41,
+      description: 'Monkey pfp like you\'ve never seen before',
+      category: 'pfp',
+      productName: 'Monkey',
+      imageURL: '/monkey.png',
+      altText: 'monkey pfp',
+      author: 'AB x acZ',
+      price: 100,
+    }, 
+    {
+      id: 42,
+      description: 'Monkee pfp lik you haave never ever ever scene be for',
+      category: 'pfp',
+      productName: 'Monkee',
+      imageURL: '/monkee.png',
+      altText: 'monkee pfp',
+      author: 'AB x acZ',
+      price: 106,
+    }, 
+    {
+      id: 43,
+      description: 'My keys pfp liek you wood hav all wayys want',
+      category: 'pfp',
+      productName: 'My keys',
+      imageURL: '/mykeys.png',
+      altText: 'My Keys pfp',
+      author: 'AB x acZ',
+      price: 110,
+    }, 
+    {
       id: 1,
       description:
         "Bucket of Golden Bon Bons is a cool pfp apart of the golden collection",
@@ -129,6 +159,26 @@ export default function ProductLists() {
       price: 110,
     },
     {
+      id: 38,
+      description: 'A photo of a lot of salt in the outback. Warning this photo is very salty',
+      category: 'photography',
+      productName: 'It\'s a salty not snowy here',
+      imageURL: '/salty.jpg',
+      altText: 'salt pan photo',
+      author: 'acZ',
+      price: 68,
+    }, 
+    {
+      id: 39,
+      description: 'Uluru at sunset. A beautiful photo of a beautiful place',
+      category: 'photography',
+      productName: 'Uluru at Sunset.',
+      imageURL: '/uluru.jpg',
+      altText: 'uluru photo',
+      author: 'acZ',
+      price: 65,
+    }, 
+    {
       id: 12,
       description:
         "Golden Gadget of Games is a cool pfp apart of the golden collection",
@@ -237,6 +287,26 @@ export default function ProductLists() {
       author: "AB",
       price: 210,
     },
+    {
+      id: 37,
+      description: 'For real goldfish that looks like it has a moustache',
+      category: 'photography',
+      productName: 'Moustachio Goldfish',
+      imageURL: '/realfish.jpg',
+      altText: 'Goldfish moustache photo',
+      author: 'acZ',
+      price: 69,
+    }, 
+    {
+      id: 40,
+      description: 'It\'s a waterfall. What more do you want?',
+      category: 'photography',
+      productName: 'Waterfall',
+      imageURL: '/waterfall.jpg',
+      altText: 'waterfall photo',
+      author: 'acZ',
+      price: 22,
+    }, 
     {
       id: 22,
       description:
@@ -374,6 +444,26 @@ export default function ProductLists() {
       author: "but why photos",
       price: 93,
     },
+    {
+      id: 35,
+      description: 'Photo taken on a flight with a real mystical feel to it',
+      category: 'photography',
+      productName: 'Magical Journey',
+      imageURL: '/magicflight.jpg',
+      altText: 'Magical Journey photo',
+      author: 'acZ',
+      price: 62,
+    }, 
+    {
+      id: 36,
+      description: 'Expertly done photo taken of a random penguin',
+      category: 'photography',
+      productName: 'Penguin I guess...',
+      imageURL: '/penguin.jpg',
+      altText: 'Penguin photo',
+      author: 'acZ',
+      price: 62,
+    }, 
   ];
 
   // logic for the menu can filter
