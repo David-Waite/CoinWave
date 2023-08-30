@@ -132,7 +132,6 @@ export default function SlideShow({ slides }) {
   });
   return (
     <div className={styles.slideShowContainer}>
-      <div className={styles.dimmer}></div>
       <div className={styles.rightBtn} onClick={handleRightButton}>
         <SlArrowRight />
       </div>
