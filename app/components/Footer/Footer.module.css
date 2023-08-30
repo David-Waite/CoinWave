@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background: linear-gradient(90deg, #ff9e9e 0%, #6f9bef 69.85%, #1b50b8 100%);
+}
+
+.copyright {
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
