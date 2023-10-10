@@ -1,5 +1,0 @@
-.main {
-  background: linear-gradient(90deg, #ff9e9e 0%, #6f9bef 69.85%, #1b50b8 100%);
-  min-height: calc(100vh - 69px);
-  display: flex;
-}

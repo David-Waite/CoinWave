@@ -3,7 +3,6 @@ import Nav from "./components/Nav/Nav";
 import "./globals.css";
 import { CartProvider } from "../context/cart";
 import { Montserrat } from "next/font/google";
-import Footer from "./components/Footer/Footer";
 
 // font imported by google fonts
 
@@ -21,7 +20,6 @@ export default function RootLayout({ children }) {
         <body className={montserrat.className}>
           <Nav />
           {children}
-          <Footer />
         </body>
       </html>
     </CartProvider>
