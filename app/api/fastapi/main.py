@@ -500,13 +500,13 @@ async def get_purchase(purchase_id: int, userAddress: str):
 
 @app.get("/purchases/")
 async def get_purchases(userAddress: str):
-    purchase_count = purch_contract.functions.getPurchaseCount().call({
-        'from': userAddress})
     all_purchases = []
 
-    for i in range(1, purchase_count + 1):
-        purchase_data = purch_contract.functions.getPurchase(
-            i).call({'from': userAddress})
+    # Retrieve purchases using the new Solidity function
+    user_purchases = purch_contract.functions.getPurchases().call({'from': userAddress})
+
+    for i in range(len(user_purchases)):
+        purchase_data = user_purchases[i]
         purchase = {
             "itemName": purchase_data[0],
             "itemPrice": purchase_data[1],
@@ -517,4 +517,5 @@ async def get_purchases(userAddress: str):
             "email": purchase_data[6],
         }
         all_purchases.append(purchase)
+
     return {"purchases": all_purchases}

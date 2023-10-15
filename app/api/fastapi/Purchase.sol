@@ -47,6 +47,29 @@ contract Purchase {
         Transaction memory purchase = purchases[_purchaseId];
         return (purchase.itemName, purchase.itemPrice, purchase.purchaseTime, purchase.userAddress, purchase.firstName, purchase.lastName, purchase.email);
     }
+
+    function getPurchases() public view returns (Transaction[] memory) {
+        uint256 count = 0;
+        
+        for (uint256 i = 0; i <= purchaseCount; i++) {
+            if (purchases[i].userAddress == msg.sender) {
+                count++;
+            }
+        }
+        
+        Transaction[] memory userPurchases = new Transaction[](count);
+        count = 0;
+        
+        for (uint256 i = 0; i <= purchaseCount; i++) {
+            if (purchases[i].userAddress == msg.sender) {
+                userPurchases[count] = purchases[i];
+                count++;
+            }
+        }
+        
+        return userPurchases;
+    }
+
     function getPurchaseCount() public view returns (uint256) {
         return purchaseCount;
     }
